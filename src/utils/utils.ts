@@ -16,7 +16,8 @@ type Metadata = {
   summary: string;
   image?: string;
   images: string[];
-  tag?: string;
+  theme?: string;
+  tags?: string[];
   team: Team[];
   link?: string;
 };
@@ -46,7 +47,8 @@ function readMDXFile(filePath: string) {
     summary: data.summary || "",
     image: data.image || "",
     images: data.images || [],
-    tag: data.tag || [],
+    theme: data.theme || undefined,
+    tags: data.tags || [],
     team: data.team || [],
     link: data.link || "",
   };
