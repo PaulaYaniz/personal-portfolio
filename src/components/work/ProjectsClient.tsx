@@ -25,17 +25,6 @@ interface ProjectsClientProps {
 }
 
 export function ProjectsClient({ projects }: ProjectsClientProps) {
-  // Get all unique themes from projects
-  const allThemes = useMemo(() => {
-    const themes = new Set<string>();
-    projects.forEach((post) => {
-      if (post.metadata.theme) {
-        themes.add(post.metadata.theme);
-      }
-    });
-    return Array.from(themes).sort();
-  }, [projects]);
-
   // Get all unique tags from projects
   const allTags = useMemo(() => {
     const tags = new Set<string>();
@@ -47,14 +36,7 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
     return Array.from(tags).sort();
   }, [projects]);
 
-  const [selectedThemes, setSelectedThemes] = useState<string[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
-
-  const handleThemeToggle = (theme: string) => {
-    setSelectedThemes((prev) =>
-      prev.includes(theme) ? prev.filter((t) => t !== theme) : [...prev, theme]
-    );
-  };
 
   const handleTagToggle = (tag: string) => {
     setSelectedTags((prev) =>
@@ -62,16 +44,9 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
     );
   };
 
-  // Filter projects by themes and tags
+  // Filter projects by tags
   const filteredProjects = useMemo(() => {
     let filtered = projects;
-
-    // Filter by themes (if any selected)
-    if (selectedThemes.length > 0) {
-      filtered = filtered.filter((post) =>
-        post.metadata.theme ? selectedThemes.includes(post.metadata.theme) : false
-      );
-    }
 
     // Filter by tags (if any selected)
     if (selectedTags.length > 0) {
@@ -82,17 +57,14 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
     }
 
     return filtered;
-  }, [projects, selectedThemes, selectedTags]);
+  }, [projects, selectedTags]);
 
   return (
     <>
-      {(allThemes.length > 0 || allTags.length > 0) && (
+      {allTags.length > 0 && (
         <ProjectFilter
-          allThemes={allThemes}
           allTags={allTags}
-          selectedThemes={selectedThemes}
           selectedTags={selectedTags}
-          onThemeToggle={handleThemeToggle}
           onTagToggle={handleTagToggle}
         />
       )}
