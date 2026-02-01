@@ -2,48 +2,33 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Paula",
+  lastName: "Yaniz Macia",
+  name: `Paula Yaniz Macia`,
+  role: "CS & Business Student",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "pyanizmacia@mail.wlu.edu",
+  location: "America/New_York", // Lexington, VA timezone
+  languages: ["English", "Spanish"],
 };
 
 const newsletter: Newsletter = {
   display: true,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  description: <>Updates on projects at the intersection of business and technology</>,
 };
 
 const social: Social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  // Set essentials: true for links you want to show on the about page
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/PaulaYaniz",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-    essential: true,
-  },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/paulaya/",
     essential: true,
   },
   {
@@ -60,23 +45,23 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Building solutions at the intersection of business and technology</>,
   featured: {
     display: true,
     title: (
       <Row gap="12" vertical="center">
-        <strong className="ml-4">Once UI</strong>{" "}
+        <strong className="ml-4">AV Raval</strong>{" "}
         <Line background="brand-alpha-strong" vert height="20" />
         <Text marginRight="4" onBackground="brand-medium">
-          Featured work
+          Featured project
         </Text>
       </Row>
     ),
-    href: "/work/building-once-ui-a-customizable-design-system",
+    href: "/work/av-raval-digital-voting-system",
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    I'm Paula, a Computer Science and Business Administration student at <Text as="span" size="xl" weight="strong">Washington and Lee University</Text>. I lead cross-functional projects <br /> and translate user needs into technical solutions throughout the full product lifecycle.
 </>
   ),
 };
@@ -85,7 +70,7 @@ const about: About = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, ${person.role} from Washington and Lee University`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -94,7 +79,7 @@ const about: About = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
@@ -102,52 +87,76 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Paula is a Business Administration and Computer Science student at Washington and Lee University 
+        with experience leading cross-functional projects across startup and nonprofit settings. Certified 
+        in International Trade and skilled in Python, Claude Code, AWS, and Adobe Creative Suite, she 
+        translates user needs into technical solutions throughout the full product lifecycle.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
+    display: true,
+    title: "Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Washington and Lee University",
+        timeframe: "Jan. 2026 - Present",
+        role: "Teaching Assistant - Computer Science",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Helped 20+ students understand technical concepts by translating complex ideas into clear, 
+            practical explanations
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Worked closely with the professor to identify common student difficulties and improve 
+            assignments and labs
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Diversified Capital Group",
+        timeframe: "Jan. 2025 - Present",
+        role: "Technology Sector Analyst",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Conducted competitive analysis of AI-driven tech business models to inform product strategy 
+            for a $650k portfolio
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Analyzed financial and product metrics (revenue, user growth) to form data-driven investment theses
+          </>,
+          <>
+            Delivered public investment pitches to stakeholders, successfully defending strategic portfolio 
+            recommendations
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Jane Goodall Institute",
+        timeframe: "May 2025 - Sept. 2025",
+        role: "Development Intern",
+        achievements: [
+          <>
+            Evaluated 40+ funding proposals via ROI to align initiatives with strategic goals and 
+            cross-functional roadmaps
+          </>,
+          <>
+            Designed data visualizations for 2023–25 Impact Report to communicate project outcomes to 
+            global stakeholders
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Project Horizon NGO",
+        timeframe: "Oct. 2024 - Present",
+        role: "Crisis Operations Lead",
+        achievements: [
+          <>
+            Managed crisis response and resource deployment (medical, legal, shelter) on 24/7 abuse hotline, 
+            utilizing rapid risk assessments to optimize shelter operations and ensure safety protocol compliance
           </>,
         ],
         images: [],
@@ -155,54 +164,85 @@ const about: About = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
+    display: true,
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Washington and Lee University",
+        description: (
+          <>
+            Bachelor of Science in Computer Science and Business Administration (2024-2028). 
+            Bonner & Davis Scholar (full-ride scholarship), GPA: 3.74. Active in AI Club, GenTech, 
+            Student Consulting, and Engineering Community Development.
+          </>
+        ),
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "UWC ISAK Japan",
+        description: (
+          <>
+            International Baccalaureate (2022-2024). $70k scholarship recipient with leadership roles 
+            in Outdoor Education, Politics club, and Orientation.
+          </>
+        ),
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
+        title: "Product Management",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>
+            Experienced in Agile/Scrum methodologies, roadmap development, and translating user needs 
+            into technical requirements and prioritized product backlogs.
+          </>
         ),
         tags: [
           {
-            name: "Figma",
+            name: "Agile/Scrum",
+            icon: "code",
+          },
+          {
+            name: "User Research",
             icon: "figma",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
       {
-        title: "Next.js",
+        title: "AI & Data Analysis",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>
+            Proficient in Claude Code, Python (pandas, Matplotlib), SQL, and ArcGIS for data analysis 
+            and visualization. Experience with OpenAI API integration and prompt engineering.
+          </>
+        ),
+        tags: [
+          {
+            name: "Python",
+            icon: "python",
+          },
+          {
+            name: "Claude Code",
+            icon: "code",
+          },
+          {
+            name: "SQL",
+            icon: "database",
+          },
+        ],
+        images: [],
+      },
+      {
+        title: "Technical & Design",
+        description: (
+          <>
+            Full-stack development with JavaScript, HTML/CSS, and AWS. UI/UX design with Figma and 
+            Adobe Illustrator for creating user flows and prototypes.
+          </>
         ),
         tags: [
           {
@@ -210,23 +250,15 @@ const about: About = {
             icon: "javascript",
           },
           {
-            name: "Next.js",
-            icon: "nextjs",
+            name: "AWS",
+            icon: "aws",
           },
           {
-            name: "Supabase",
-            icon: "supabase",
+            name: "Figma",
+            icon: "figma",
           },
         ],
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
     ],
   },
@@ -235,19 +267,15 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about product and tech...",
   description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
 };
 
 const work: Work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  description: `Product and development projects by ${person.name}`,
 };
 
 const gallery: Gallery = {
@@ -255,8 +283,6 @@ const gallery: Gallery = {
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",
