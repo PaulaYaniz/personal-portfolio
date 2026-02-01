@@ -12,6 +12,7 @@ interface Project {
     summary: string;
     publishedAt: string;
     images: string[];
+    theme?: string;
     tags?: string[];
     team?: Array<{ avatar: string }>;
     link?: string;
@@ -24,6 +25,17 @@ interface ProjectsClientProps {
 }
 
 export function ProjectsClient({ projects }: ProjectsClientProps) {
+  // Get all unique themes from projects
+  const allThemes = useMemo(() => {
+    const themes = new Set<string>();
+    projects.forEach((post) => {
+      if (post.metadata.theme) {
+        themes.add(post.metadata.theme);
+      }
+    });
+    return Array.from(themes).sort();
+  }, [projects]);
+
   // Get all unique tags from projects
   const allTags = useMemo(() => {
     const tags = new Set<string>();
@@ -35,7 +47,14 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
     return Array.from(tags).sort();
   }, [projects]);
 
+  const [selectedThemes, setSelectedThemes] = useState<string[]>([]);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+
+  const handleThemeToggle = (theme: string) => {
+    setSelectedThemes((prev) =>
+      prev.includes(theme) ? prev.filter((t) => t !== theme) : [...prev, theme]
+    );
+  };
 
   const handleTagToggle = (tag: string) => {
     setSelectedTags((prev) =>
@@ -43,20 +62,37 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
     );
   };
 
-  // Filter projects by selected tags
-  const filteredProjects = selectedTags.length > 0
-    ? projects.filter((post) => {
+  // Filter projects by themes and tags
+  const filteredProjects = useMemo(() => {
+    let filtered = projects;
+
+    // Filter by themes (if any selected)
+    if (selectedThemes.length > 0) {
+      filtered = filtered.filter((post) =>
+        post.metadata.theme ? selectedThemes.includes(post.metadata.theme) : false
+      );
+    }
+
+    // Filter by tags (if any selected)
+    if (selectedTags.length > 0) {
+      filtered = filtered.filter((post) => {
         const projectTags = post.metadata.tags || [];
         return selectedTags.some((tag) => projectTags.includes(tag));
-      })
-    : projects;
+      });
+    }
+
+    return filtered;
+  }, [projects, selectedThemes, selectedTags]);
 
   return (
     <>
-      {allTags.length > 0 && (
+      {(allThemes.length > 0 || allTags.length > 0) && (
         <ProjectFilter
+          allThemes={allThemes}
           allTags={allTags}
+          selectedThemes={selectedThemes}
           selectedTags={selectedTags}
+          onThemeToggle={handleThemeToggle}
           onTagToggle={handleTagToggle}
         />
       )}
