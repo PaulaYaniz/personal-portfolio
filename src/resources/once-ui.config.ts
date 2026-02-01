@@ -191,9 +191,8 @@ const schema: SchemaConfig = {
   email: "pyanizmacia@mail.wlu.edu",
 };
 
-// social links
+// social links (for SEO schema)
 const sameAs: SameAsConfig = {
-  github: "https://github.com/PaulaYaniz",
   linkedin: "https://www.linkedin.com/in/paulaya/",
 };
 
