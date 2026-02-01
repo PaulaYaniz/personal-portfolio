@@ -29,9 +29,9 @@ export function Projects({ range, exclude }: ProjectsProps) {
       gap="xl"
       marginBottom="40"
       paddingX="l"
-      columns={2}
-      tabletColumns={1}
-      mobileColumns={1}
+      columns="2"
+      m={{ columns: "1" }}
+      s={{ columns: "1" }}
     >
       {displayedProjects.map((post, index) => (
         <ProjectCard
