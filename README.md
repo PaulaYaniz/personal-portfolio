@@ -1,91 +1,93 @@
-# Magic Portfolio
+# Paula Yaniz Macia - Portfolio
 
-Magic Portfolio is a simple, clean, beginner-friendly portfolio template. It supports an MDX-based content system for projects and blog posts, an about / CV page and a gallery.
+My personal portfolio showcasing my work at the intersection of business and technology. I'm a Computer Science and Business Administration student at Washington and Lee University with experience in product management, UX research, and data analysis.
 
-View the demo [here](https://demo.magic-portfolio.com).
+🌐 **Live Site**: [paulayaniz.vercel.app](https://paulayaniz.vercel.app)
 
-![Magic Portfolio](public/images/og/home.jpg)
+## About This Portfolio
 
-## Getting started
+This portfolio features my work across:
+- Product & UX Projects (AV Raval, Madrid Thrifting Directory, ISAK Konbini)
+- GIS & Data Analysis (Cyclone Idai, Ethiopia Analysis)
+- Programming Projects (Full-stack web apps, mobile apps, IoT systems)
 
-**1. Clone the repository**
-```
-git clone https://github.com/once-ui-system/magic-portfolio.git
-```
+## Tech Stack
 
-**2. Install dependencies**
-```
+Built with:
+- **Framework**: Next.js 16
+- **UI**: Once UI Design System
+- **Styling**: CSS with design tokens
+- **Content**: MDX for project pages
+- **Deployment**: Vercel
+- **Language**: TypeScript
+
+## Local Development
+
+```bash
+# Install dependencies
 npm install
-```
 
-**3. Run dev server**
-```
+# Run development server
 npm run dev
+
+# Build for production
+npm run build
 ```
 
-**4. Edit config**
+Visit `http://localhost:3000` to see the portfolio locally.
+
+## Project Structure
+
 ```
-src/resources/once-ui.config.js
+src/
+├── app/                    # Next.js app directory
+│   ├── work/projects/     # Project MDX files
+│   └── about/             # About page
+├── resources/
+│   ├── content.tsx        # Portfolio content & info
+│   └── once-ui.config.ts  # Site configuration
+public/
+└── images/                # Project images & assets
 ```
 
-**5. Edit content**
-```
-src/resources/content.js
-```
+## Updating Content
 
-**6. Create blog posts / projects**
-```
-Add a new .mdx file to src/app/blog/posts or src/app/work/projects
-```
+### Personal Info
+Edit `src/resources/content.tsx` to update:
+- Bio and introduction
+- Work experience
+- Education
+- Technical skills
+- Social links
 
-Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
+### Site Config
+Edit `src/resources/once-ui.config.ts` for:
+- Domain settings
+- Theme customization
+- Route configuration
 
-## Documentation
+### Adding Projects
+1. Create a new `.mdx` file in `src/app/work/projects/`
+2. Add project images to `public/images/projects/project-01/`
+3. Use the existing project files as templates
 
-Docs available at: [docs.once-ui.com](https://docs.once-ui.com/docs/magic-portfolio/quick-start)
+### Replacing Images
+See `public/images/IMAGE-GUIDE.md` for detailed instructions on image placement.
 
-## Features
+## Deployment
 
-### Once UI
-- All tokens, components & features of [Once UI](https://once-ui.com)
+This portfolio auto-deploys to Vercel on every push to `main`. Any changes you commit will be live within 1-2 minutes.
 
-### SEO
-- Automatic open-graph and X image generation with next/og
-- Automatic schema and metadata generation based on the content file
+## Contact
 
-### Design
-- Responsive layout optimized for all screen sizes
-- Timeless design without heavy animations and motion
-- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
+- **Email**: pyanizmacia@mail.wlu.edu
+- **LinkedIn**: [linkedin.com/in/paulaya](https://www.linkedin.com/in/paulaya/)
+- **GitHub**: [github.com/PaulaYaniz](https://github.com/PaulaYaniz)
 
-### Content
-- Render sections conditionally based on the content file
-- Enable or disable pages for blog, work, gallery and about / CV
-- Generate and display social links automatically
-- Set up password protection for URLs
+## Built With
 
-### Localization
-- A localized, earlier version of Magic Portfolio is available with the next-intl library
-- To use localization, switch to the 'i18n' branch
-
-## Creators
-
-Lorant One: [Threads](https://www.threads.net/@lorant.one) / [LinkedIn](https://www.linkedin.com/in/lorant-one/)
-
-## Get involved
-
-- Join the Design Engineers Club on [Discord](https://discord.com/invite/5EyAQ4eNdS) and share your project with us!
-- Deployed your docs? Share it on the [Once UI Hub](https://once-ui.com/hub) too! We feature our favorite apps on our landing page.
+This portfolio is built using the [Magic Portfolio](https://github.com/once-ui-system/magic-portfolio) template with [Once UI](https://once-ui.com) components.
 
 ## License
 
-Distributed under the CC BY-NC 4.0 License.
-- Attribution is required.
-- Commercial usage is not allowed.
-- You can extend the license to [Dopler CC](https://dopler.app/license) by purchasing a [Once UI Pro](https://once-ui.com/pricing) license.
-
-See `LICENSE.txt` for more information.
-
-## Deploy with Vercel
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fog%2Fhome.jpg)
+See `LICENSE.txt` for license information.
