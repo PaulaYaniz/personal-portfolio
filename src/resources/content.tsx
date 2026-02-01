@@ -8,7 +8,7 @@ const person: Person = {
   role: "CS & Business Student",
   avatar: "/images/avatar.jpg",
   email: "pyanizmacia@mail.wlu.edu",
-  location: "America/New_York", // Lexington, VA timezone
+  location: "Lexington, VA", // Lexington, VA timezone
   languages: ["English", "Spanish"],
 };
 
@@ -87,10 +87,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Paula is a Business Administration and Computer Science student at Washington and Lee University 
+        Business Administration and Computer Science student at Washington and Lee University 
         with experience leading cross-functional projects across startup and nonprofit settings. Certified 
-        in International Trade and skilled in Python, Claude Code, AWS, and Adobe Creative Suite, she 
-        translates user needs into technical solutions throughout the full product lifecycle.
+        in International Trade and skilled in Python, Claude Code, AWS, and Adobe Creative Suite to 
+        translate user needs into technical solutions throughout the full product lifecycle.
       </>
     ),
   },
