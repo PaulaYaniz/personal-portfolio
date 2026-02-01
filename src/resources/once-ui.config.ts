@@ -18,7 +18,7 @@ const baseURL: string = "https://paulayaniz.vercel.app";
 
 const routes: RoutesConfig = {
   "/": true,
-  "/about": true,
+  "/about": false,
   "/work": true,
   "/blog": false,
   "/gallery": false,
