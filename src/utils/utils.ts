@@ -21,6 +21,8 @@ type Metadata = {
   tools?: string[];
   team: Team[];
   link?: string;
+  projectUrl?: string;
+  sourceUrl?: string;
 };
 
 import { notFound } from "next/navigation";
@@ -53,6 +55,8 @@ function readMDXFile(filePath: string) {
     tools: data.tools || [],
     team: data.team || [],
     link: data.link || "",
+    projectUrl: data.projectUrl || undefined,
+    sourceUrl: data.sourceUrl || undefined,
   };
 
   return { metadata, content };
