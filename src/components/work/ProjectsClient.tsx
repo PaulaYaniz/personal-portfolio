@@ -14,6 +14,7 @@ interface Project {
     images: string[];
     theme?: string;
     tags?: string[];
+    tools?: string[];
     team?: Array<{ avatar: string }>;
     link?: string;
   };
@@ -25,7 +26,7 @@ interface ProjectsClientProps {
 }
 
 export function ProjectsClient({ projects }: ProjectsClientProps) {
-  // Get all unique tags from projects
+  // Get all unique tags (skills) from projects
   const allTags = useMemo(() => {
     const tags = new Set<string>();
     projects.forEach((post) => {
@@ -36,7 +37,19 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
     return Array.from(tags).sort();
   }, [projects]);
 
+  // Get all unique tools from projects
+  const allTools = useMemo(() => {
+    const tools = new Set<string>();
+    projects.forEach((post) => {
+      if (post.metadata.tools && Array.isArray(post.metadata.tools)) {
+        post.metadata.tools.forEach((tool: string) => tools.add(tool));
+      }
+    });
+    return Array.from(tools).sort();
+  }, [projects]);
+
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
+  const [selectedTools, setSelectedTools] = useState<string[]>([]);
 
   const handleTagToggle = (tag: string) => {
     setSelectedTags((prev) =>
@@ -44,11 +57,17 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
     );
   };
 
-  // Filter projects by tags
+  const handleToolToggle = (tool: string) => {
+    setSelectedTools((prev) =>
+      prev.includes(tool) ? prev.filter((t) => t !== tool) : [...prev, tool]
+    );
+  };
+
+  // Filter projects by tags and tools
   const filteredProjects = useMemo(() => {
     let filtered = projects;
 
-    // Filter by tags (if any selected)
+    // Filter by tags (skills) - if any selected
     if (selectedTags.length > 0) {
       filtered = filtered.filter((post) => {
         const projectTags = post.metadata.tags || [];
@@ -56,8 +75,16 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
       });
     }
 
+    // Filter by tools - if any selected
+    if (selectedTools.length > 0) {
+      filtered = filtered.filter((post) => {
+        const projectTools = post.metadata.tools || [];
+        return selectedTools.some((tool) => projectTools.includes(tool));
+      });
+    }
+
     return filtered;
-  }, [projects, selectedTags]);
+  }, [projects, selectedTags, selectedTools]);
 
   return (
     <>
@@ -66,6 +93,9 @@ export function ProjectsClient({ projects }: ProjectsClientProps) {
           allTags={allTags}
           selectedTags={selectedTags}
           onTagToggle={handleTagToggle}
+          allTools={allTools}
+          selectedTools={selectedTools}
+          onToolToggle={handleToolToggle}
         />
       )}
       <Grid
