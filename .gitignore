@@ -34,3 +34,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# separate nested project (not part of this portfolio)
+/carrers-engalanats/

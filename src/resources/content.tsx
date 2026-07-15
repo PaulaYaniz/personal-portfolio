@@ -5,7 +5,7 @@ const person: Person = {
   firstName: "Paula",
   lastName: "Yaniz Macia",
   name: `Paula Yaniz Macia`,
-  role: "CS & Business Student",
+  role: "Product Manager · CS & Business Student",
   avatar: "/images/avatar.jpg",
   email: "pyanizmacia@mail.wlu.edu",
   location: "Lexington, VA", // Lexington, VA timezone
@@ -87,10 +87,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Business Administration and Computer Science student at Washington and Lee University 
-        with experience leading cross-functional projects across startup and nonprofit settings. Certified 
-        in International Trade and skilled in Python, Claude Code, AWS, and Adobe Creative Suite to 
-        translate user needs into technical solutions throughout the full product lifecycle.
+        Business Administration and Computer Science student at Washington and Lee University
+        with experience leading cross-functional product teams across startup and nonprofit settings.
+        Certified in International Trade, I pair user research with hands-on AI work—LLMs, the Claude API,
+        and prompt engineering—to build trustworthy, user-centered products across the full product lifecycle.
       </>
     ),
   },
@@ -99,17 +99,51 @@ const about: About = {
     title: "Experience",
     experiences: [
       {
+        company: "Develop for Good 501(c)(3)",
+        timeframe: "May 2026 - Present",
+        role: "Product Manager",
+        achievements: [
+          <>
+            Led a 10-person engineering and design team to launch a website and internal database
+            for a nonprofit
+          </>,
+          <>
+            Interviewed nonprofit leaders and IT admins to identify workflow bottlenecks and define
+            the first product release
+          </>,
+          <>Wrote PRDs and coordinated weekly sprints across engineering and design teams</>,
+          <>Launched a Supabase/Vercel database and WordPress site serving 40+ customers</>,
+        ],
+        images: [],
+      },
+      {
+        company: "Washington and Lee University",
+        timeframe: "June 2026 - Present",
+        role: "AI Research Assistant · Summer Research Scholars",
+        achievements: [
+          <>
+            Analyzed 6,000 Kickstarter campaigns to measure how AI claims affect funding outcomes
+          </>,
+          <>Built an NLP pipeline to classify AI messaging across campaigns</>,
+          <>
+            Identified how language around AI moderates customer trust, informing recommendations
+            for trustworthy AI communication
+          </>,
+        ],
+        images: [],
+      },
+      {
         company: "Washington and Lee University",
         timeframe: "Jan. 2026 - Present",
         role: "Teaching Assistant - Computer Science",
         achievements: [
           <>
-            Helped 20+ students understand technical concepts by translating complex ideas into clear, 
+            Helped 30+ students understand technical concepts by translating complex ideas into clear,
             practical explanations
           </>,
           <>
-            Worked closely with the professor to identify common student difficulties and improve 
-            assignments and labs
+            Collaborated with faculty to identify recurring learning challenges and improve course
+            materials and labs
           </>,
         ],
         images: [],
@@ -171,9 +205,9 @@ const about: About = {
         name: "Washington and Lee University",
         description: (
           <>
-            Bachelor of Science in Computer Science and Business Administration (2024-2028). 
-            Bonner & Davis Scholar (full-ride scholarship), GPA: 3.74. Active in AI Club, GenTech, 
-            Student Consulting, and Engineering Community Development.
+            Bachelor of Science in Computer Science and Business Administration (2024-2028).
+            Bonner & Davis Scholar (full-ride scholarship), GPA: 3.72. Active in AI Club, GenTech,
+            Student Consulting, Engineering Community Development, and the Latino Association.
           </>
         ),
       },
@@ -196,18 +230,23 @@ const about: About = {
         title: "Product Management",
         description: (
           <>
-            Experienced in Agile/Scrum methodologies, roadmap development, and translating user needs 
-            into technical requirements and prioritized product backlogs.
+            Experienced in Agile/Scrum, roadmap development, PRDs, and translating user needs into
+            prioritized product backlogs. Skilled in user research, A/B testing, and KPI definition
+            using Figma, Jira, and Notion.
           </>
         ),
         tags: [
           {
-            name: "Agile/Scrum",
+            name: "Figma",
+            icon: "figma",
+          },
+          {
+            name: "Jira",
             icon: "code",
           },
           {
             name: "User Research",
-            icon: "figma",
+            icon: "person",
           },
         ],
         images: [],
@@ -216,17 +255,22 @@ const about: About = {
         title: "AI & Data Analysis",
         description: (
           <>
-            Proficient in Claude Code, Python (pandas, Matplotlib), SQL, and ArcGIS for data analysis 
-            and visualization. Experience with OpenAI API integration and prompt engineering.
+            Proficient in Claude Code, the Claude API, Python (pandas, Matplotlib), SQL, and ArcGIS for
+            data analysis and LLM-based text classification. Experienced with agentic AI tools and
+            prompt engineering.
           </>
         ),
         tags: [
+          {
+            name: "LLMs",
+            icon: "code",
+          },
           {
             name: "Python",
             icon: "python",
           },
           {
-            name: "Claude Code",
+            name: "Claude API",
             icon: "code",
           },
           {
@@ -237,21 +281,26 @@ const about: About = {
         images: [],
       },
       {
-        title: "Technical & Design",
+        title: "Engineering & Design",
         description: (
           <>
-            Full-stack development with JavaScript, HTML/CSS, and AWS. UI/UX design with Figma and 
-            Adobe Illustrator for creating user flows and prototypes.
+            Native iOS development with Swift and SwiftUI (shipped an accessibility-first app), plus
+            web development with JavaScript, HTML/CSS, and AWS. UI/UX design with Figma and Adobe
+            Illustrator for user flows and prototypes.
           </>
         ),
         tags: [
           {
-            name: "JavaScript",
-            icon: "javascript",
+            name: "Swift",
+            icon: "code",
           },
           {
-            name: "AWS",
-            icon: "aws",
+            name: "SwiftUI",
+            icon: "code",
+          },
+          {
+            name: "JavaScript",
+            icon: "javascript",
           },
           {
             name: "Figma",
