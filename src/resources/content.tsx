@@ -99,9 +99,9 @@ const about: About = {
     title: "Experience",
     experiences: [
       {
+        role: "Product Manager",
         company: "Develop for Good",
         timeframe: "May 2026 – Sep. 2026",
-        role: "Product Manager",
         achievements: [
           <>
             Led a 10-person engineering and design team building an NGO website and internal database
@@ -119,9 +119,9 @@ const about: About = {
         images: [],
       },
       {
+        role: "Computer Science Teaching Assistant",
         company: "Washington and Lee University",
         timeframe: "Jan. 2026 – Present",
-        role: "Computer Science Teaching Assistant",
         achievements: [
           <>
             Translated complex technical concepts into clear, practical explanations for 50+ students
@@ -133,9 +133,9 @@ const about: About = {
         images: [],
       },
       {
+        role: "AI Research Assistant",
         company: "Washington and Lee University",
         timeframe: "Jun. 2026 – Aug. 2026",
-        role: "AI Research Assistant",
         achievements: [
           <>
             Analyzed 6,000 Kickstarter campaigns with Stata to measure how AI claims relate to funding outcomes
@@ -150,9 +150,9 @@ const about: About = {
         images: [],
       },
       {
+        role: "Technology Sector Analyst",
         company: "Diversified Capital Group",
         timeframe: "Jan. 2025 – May 2026",
-        role: "Technology Sector Analyst",
         achievements: [
           <>
             Conducted competitive analysis of AI and technology companies to inform strategy for a $650k portfolio
