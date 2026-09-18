@@ -87,10 +87,10 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        Business Administration and Computer Science student at Washington and Lee University
-        with experience leading cross-functional product teams across startup and nonprofit settings.
-        Certified in International Trade, I pair user research with hands-on AI work—LLMs, the Claude API,
-        and prompt engineering—to build trustworthy, user-centered products across the full product lifecycle.
+        Product Manager and Computer Science & Business Administration student at Washington and Lee University
+        with experience leading cross-functional teams at nonprofits, startups, and research initiatives.
+        I combine user research with technical depth—Python, SQL, LLMs, and AI—to define product strategy and build
+        user-centered solutions across the full product lifecycle.
       </>
     ),
   },
@@ -99,98 +99,66 @@ const about: About = {
     title: "Experience",
     experiences: [
       {
-        company: "Develop for Good 501(c)(3)",
-        timeframe: "May 2026 - Present",
+        company: "Develop for Good",
+        timeframe: "May 2026 – Sep. 2026",
         role: "Product Manager",
         achievements: [
           <>
-            Led a 10-person engineering and design team to launch a website and internal database
-            for a nonprofit
+            Led a 10-person engineering and design team building an NGO website and internal database
           </>,
           <>
-            Interviewed nonprofit leaders and IT admins to identify workflow bottlenecks and define
-            the first product release
+            Interviewed IT leaders to identify workflow bottlenecks, gather requirements, and define MVP scope
           </>,
-          <>Wrote PRDs and coordinated weekly sprints across engineering and design teams</>,
-          <>Launched a Supabase/Vercel database and WordPress site serving 40+ customers</>,
-        ],
-        images: [],
-      },
-      {
-        company: "Washington and Lee University",
-        timeframe: "June 2026 - Present",
-        role: "AI Research Assistant · Summer Research Scholars",
-        achievements: [
           <>
-            Analyzed 6,000 Kickstarter campaigns to measure how AI claims affect funding outcomes
+            Wrote PRDs, prioritized roadmap features, and ran weekly Agile sprints using Notion, Figma, and GitHub
           </>,
-          <>Built an NLP pipeline to classify AI messaging across campaigns</>,
           <>
-            Identified how language around AI moderates customer trust, informing recommendations
-            for trustworthy AI communication
+            Defined data flows and API requirements for a Supabase/SQL backend and Vercel frontend supporting 90+ users
           </>,
         ],
         images: [],
       },
       {
         company: "Washington and Lee University",
-        timeframe: "Jan. 2026 - Present",
-        role: "Teaching Assistant - Computer Science",
+        timeframe: "Jan. 2026 – Present",
+        role: "Computer Science Teaching Assistant",
         achievements: [
           <>
-            Helped 30+ students understand technical concepts by translating complex ideas into clear,
-            practical explanations
+            Translated complex technical concepts into clear, practical explanations for 50+ students
           </>,
           <>
-            Collaborated with faculty to identify recurring learning challenges and improve course
-            materials and labs
+            Collaborated with faculty to identify recurring learning challenges and improve course materials and labs
+          </>,
+        ],
+        images: [],
+      },
+      {
+        company: "Washington and Lee University",
+        timeframe: "Jun. 2026 – Aug. 2026",
+        role: "AI Research Assistant",
+        achievements: [
+          <>
+            Analyzed 6,000 Kickstarter campaigns with Stata to measure how AI claims relate to funding outcomes
+          </>,
+          <>
+            Built a 95%-accurate LLM-based NLP pipeline using Python, SQL, and Gemini API to automate AI classification
+          </>,
+          <>
+            Evaluated patterns in AI-related messaging and their relationship to startup and crowdfunding outcomes
           </>,
         ],
         images: [],
       },
       {
         company: "Diversified Capital Group",
-        timeframe: "Jan. 2025 - Present",
+        timeframe: "Jan. 2025 – May 2026",
         role: "Technology Sector Analyst",
         achievements: [
           <>
-            Conducted competitive analysis of AI-driven tech business models to inform product strategy 
-            for a $650k portfolio
+            Conducted competitive analysis of AI and technology companies to inform strategy for a $650k portfolio
           </>,
           <>
-            Analyzed financial and product metrics (revenue, user growth) to form data-driven investment theses
-          </>,
-          <>
-            Delivered public investment pitches to stakeholders, successfully defending strategic portfolio 
-            recommendations
-          </>,
-        ],
-        images: [],
-      },
-      {
-        company: "Jane Goodall Institute",
-        timeframe: "May 2025 - Sept. 2025",
-        role: "Development Intern",
-        achievements: [
-          <>
-            Evaluated 40+ funding proposals via ROI to align initiatives with strategic goals and 
-            cross-functional roadmaps
-          </>,
-          <>
-            Designed data visualizations for 2023–25 Impact Report to communicate project outcomes to 
-            global stakeholders
-          </>,
-        ],
-        images: [],
-      },
-      {
-        company: "Project Horizon NGO",
-        timeframe: "Oct. 2024 - Present",
-        role: "Crisis Operations Lead",
-        achievements: [
-          <>
-            Managed crisis response and resource deployment (medical, legal, shelter) on 24/7 abuse hotline, 
-            utilizing rapid risk assessments to optimize shelter operations and ensure safety protocol compliance
+            Presented investment recommendations by synthesizing product positioning, market trends, and growth potential
           </>,
         ],
         images: [],
@@ -205,9 +173,8 @@ const about: About = {
         name: "Washington and Lee University",
         description: (
           <>
-            Bachelor of Science in Computer Science and Business Administration (2024-2028).
-            Bonner & Davis Scholar (full-ride scholarship), GPA: 3.72. Active in AI Club, GenTech,
-            Student Consulting, Engineering Community Development, and the Latino Association.
+            Bachelor of Science in Computer Science and Business Administration, Aug. 2024 – May 2028, Lexington, VA.
+            Bonner & Davis Scholar (full-ride scholarship), GPA: 3.72. Relevant Coursework: Data Structures, Software Development, Regression Analysis, Marketing Management.
           </>
         ),
       },
@@ -215,8 +182,8 @@ const about: About = {
         name: "UWC ISAK Japan",
         description: (
           <>
-            International Baccalaureate (2022-2024). $70k scholarship recipient with leadership roles 
-            in Outdoor Education, Politics club, and Orientation.
+            International Baccalaureate, Aug. 2022 – May 2024, Karuizawa, Japan.
+            Selected as a UWC Spain scholar (3% acceptance rate); received a $70k scholarship.
           </>
         ),
       },
@@ -224,87 +191,100 @@ const about: About = {
   },
   technical: {
     display: true,
-    title: "Technical skills",
+    title: "Skills",
     skills: [
       {
-        title: "Product Management",
+        title: "Product",
         description: (
           <>
-            Experienced in Agile/Scrum, roadmap development, PRDs, and translating user needs into
-            prioritized product backlogs. Skilled in user research, A/B testing, and KPI definition
-            using Figma, Jira, and Notion.
+            User Research, Experimentation, Prototyping, PRDs, Roadmapping, Product Discovery, Product Analytics
           </>
         ),
         tags: [
           {
-            name: "Figma",
-            icon: "figma",
+            name: "User Research",
+            icon: "person",
           },
           {
-            name: "Jira",
+            name: "PRDs",
             icon: "code",
           },
           {
-            name: "User Research",
-            icon: "person",
+            name: "Roadmapping",
+            icon: "code",
           },
         ],
         images: [],
       },
       {
-        title: "AI & Data Analysis",
+        title: "Data & AI",
         description: (
           <>
-            Proficient in Claude Code, the Claude API, Python (pandas, Matplotlib), SQL, and ArcGIS for
-            data analysis and LLM-based text classification. Experienced with agentic AI tools and
-            prompt engineering.
+            Python, SQL, Stata, Regression Analysis, LLMs, NLP, Gemini API, Claude Code
           </>
         ),
         tags: [
-          {
-            name: "LLMs",
-            icon: "code",
-          },
           {
             name: "Python",
             icon: "python",
           },
           {
-            name: "Claude API",
+            name: "SQL",
+            icon: "database",
+          },
+          {
+            name: "LLMs",
             icon: "code",
           },
           {
-            name: "SQL",
-            icon: "database",
+            name: "Claude Code",
+            icon: "code",
           },
         ],
         images: [],
       },
       {
-        title: "Engineering & Design",
+        title: "Technical",
         description: (
           <>
-            Native iOS development with Swift and SwiftUI (shipped an accessibility-first app), plus
-            web development with JavaScript, HTML/CSS, and AWS. UI/UX design with Figma and Adobe
-            Illustrator for user flows and prototypes.
+            Git/GitHub, C, Java, HTML/CSS, Supabase, Vercel, Figma, Excel
           </>
         ),
         tags: [
           {
-            name: "Swift",
+            name: "Git/GitHub",
+            icon: "github",
+          },
+          {
+            name: "Supabase",
             icon: "code",
           },
           {
-            name: "SwiftUI",
+            name: "Vercel",
             icon: "code",
-          },
-          {
-            name: "JavaScript",
-            icon: "javascript",
           },
           {
             name: "Figma",
             icon: "figma",
+          },
+        ],
+        images: [],
+      },
+      {
+        title: "Languages",
+        description: (
+          <>
+            Spanish (Native), English (Fluent)
+          </>
+        ),
+        tags: [
+          {
+            name: "Spanish",
+            icon: "code",
+          },
+          {
+            name: "English",
+            icon: "code",
           },
         ],
         images: [],
