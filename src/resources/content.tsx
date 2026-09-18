@@ -99,8 +99,8 @@ const about: About = {
     title: "Experience",
     experiences: [
       {
-        role: "Product Manager",
-        company: "Develop for Good",
+        role: "Develop for Good",
+        company: "Product Manager",
         timeframe: "May 2026 – Sep. 2026",
         achievements: [
           <>
@@ -119,8 +119,8 @@ const about: About = {
         images: [],
       },
       {
-        role: "Computer Science Teaching Assistant",
-        company: "Washington and Lee University",
+        role: "Washington and Lee University",
+        company: "Computer Science Teaching Assistant",
         timeframe: "Jan. 2026 – Present",
         achievements: [
           <>
@@ -133,8 +133,8 @@ const about: About = {
         images: [],
       },
       {
-        role: "AI Research Assistant",
-        company: "Washington and Lee University",
+        role: "Washington and Lee University",
+        company: "AI Research Assistant",
         timeframe: "Jun. 2026 – Aug. 2026",
         achievements: [
           <>
@@ -150,8 +150,8 @@ const about: About = {
         images: [],
       },
       {
-        role: "Technology Sector Analyst",
-        company: "Diversified Capital Group",
+        role: "Diversified Capital Group",
+        company: "Technology Sector Analyst",
         timeframe: "Jan. 2025 – May 2026",
         achievements: [
           <>
